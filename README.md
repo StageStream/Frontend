@@ -1,2 +1,0 @@
-# Frontend
-Frontend for StageStream
