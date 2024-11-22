@@ -9,8 +9,11 @@
 </head>
 <body>
     <div class="container">
-        <div class="video-player" role="region" aria-label="Video Player">
+        <div class="video-player" role="region" aria-label="Video Player" id="no-video">
             ▶
+        </div>
+        <div class="video-player actual-player" role="region" aria-label="Video Player" id="actual-video">
+            <iframe class="video-iframe" id="video-iframe" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="sidebar">
             <h2>Current Streams</h2>

@@ -18,20 +18,7 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-app.use(express.static(path.join(__dirname, '../public')));
-
-app.get('/*', (req, res, next) => {
-    const url = req.path;
-    if (url.endsWith('/')) {
-        return res.sendFile(path.join(__dirname, `../public${url}index.html`));
-    }
-
-    if (!path.extname(url)) {
-        return res.sendFile(path.join(__dirname, `../public${url}.html`));
-    }
-
-    next();
-});
+app.use(express.static(path.join(__dirname, '../public'), { extensions: ['html'] }));
 
 app.get('/streamurl', (req, res) => {
     const streamurl = process.env.STREAM_URL || defaults.web.streamUrl;
