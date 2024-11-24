@@ -30,7 +30,13 @@ let apiUrl = '';
 
                 if (response.ok) {
                     const data = await response.json();
-                    document.cookie = `token=${data.token}; path=/; SameSite=None; Secure`;
+
+                    if (location.protocol !== 'https:') {
+                        document.cookie = `token=${data.token}; path=/`;
+                    } else {
+                        document.cookie = `token=${data.token}; path=/; SameSite=None; Secure`;
+                    }
+
                     setTimeout(async () => {
                         const success = await fetchPermissions();
                         if (success) renderMainSection();
