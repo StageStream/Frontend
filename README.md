@@ -6,7 +6,7 @@
 
 ## 🚀 **Setup**
 
-Follow the [Setup Guide](https://stagestream.jxnxsdev.me/setup) for detailed instructions.
+Follow the [Setup Guide](https://stagestream.jxnxsdev.me/guide) for detailed instructions.
 
 ---
 
